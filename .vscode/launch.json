@@ -1,0 +1,43 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+
+    {
+      "type": "lldb",
+      "request": "launch",
+      "name": "Debug executable 'actix-web-tasks'",
+      "cargo": {
+        "args": [
+          "build",
+          "--bin=actix-web-tasks",
+          "--package=actix-web-tasks"
+        ],
+        "filter": {
+          "name": "actix-web-tasks",
+          "kind": "bin"
+        }
+      },
+      "args": [],
+      "cwd": "${workspaceFolder}"
+    },
+    {
+      "type": "lldb",
+      "request": "launch",
+      "name": "Debug unit tests in executable 'actix-web-tasks'",
+      "cargo": {
+        "args": [
+          "test",
+          "--no-run",
+          "--bin=actix-web-tasks",
+          "--package=actix-web-tasks"
+        ],
+        "filter": {
+          "name": "actix-web-tasks",
+          "kind": "bin"
+        }
+      },
+      "args": [],
+      "cwd": "${workspaceFolder}"
+    }
+  ]
+}
